@@ -4,19 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechNova - Tech start-up</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .home-page .hero-tagline {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <div>
-      <img src="images/logo.png"
+<body class="home-page">
+  <header class="site-header">
+    <div class="logo-block">
+      <img class="logo-img"
+           src="images/logo.png"
            alt="Логотип Tech start-up TechNova"
            width="80" height="80">
-      <h1>Tech start-up «TechNova»</h1>
-      <p>Інноваційні цифрові рішення для бізнесу</p>
+      <div class="logo-text">
+        <h1>Tech start-up «TechNova»</h1>
+        <p class="hero-tagline">Інноваційні цифрові рішення для бізнесу</p>
+      </div>
     </div>
   </header>
 
-  <nav>
+  <nav class="site-nav">
     <ul>
       <li><a href="index.html">Головна</a></li>
       <li><a href="projects.html">Проєкти</a></li>
@@ -29,7 +40,7 @@
   </nav>
 
   <main>
-    <article id="about">
+    <article id="about" class="about-block">
       <header>
         <h2>Мета створення Tech start-up «TechNova»</h2>
       </header>
@@ -57,7 +68,7 @@
       </ul>
     </article>
 
-    <article id="founders">
+    <article id="founders" class="founders-block" tabindex="0">
       <header>
         <h2>Команда засновників TechNova</h2>
       </header>
@@ -108,7 +119,7 @@
           </tr>
           <tr>
             <td>Head of Product</td>
-            <td>Сидоренко Олег</td>
+            <td>Сидоренко Олексій</td>
             <td>8</td>
             <td>вища</td>
             <td>інформаційні системи</td>
@@ -145,54 +156,68 @@
       </table>
     </article>
 
-    <article id="reviews">
+    <article id="reviews" class="reviews-block">
       <header>
         <h2>Відгуки про нас</h2>
       </header>
-      <p>
-        «TechNova допомогла нашому бізнесу автоматизувати процеси продажу та
-        інтегрувати CRM з аналітикою. Ми отримали зростання конверсії на 25%.»
-      </p>
-      <p>
-        «Команда стартапу швидко реагує на наші запити, впроваджує нові
-        функції та пропонує оптимальні рішення для розвитку продукту.»
-      </p>
+      <div class="reviews-content">
+        <p>
+          «TechNova допомогла нашому бізнесу автоматизувати процеси продажу та
+          інтегрувати CRM з аналітикою. Ми отримали зростання конверсії на 25%.»
+        </p>
+        <p>
+          «Команда стартапу швидко реагує на наші запити, впроваджує нові
+          функції та пропонує оптимальні рішення для розвитку продукту.»
+        </p>
+      </div>
     </article>
 
-    <article>
-      <header>
-        <h2>Особистий кабінет та реєстрація</h2>
-      </header>
-      <p>Для роботи з платформою передбачено особистий кабінет для клієнтів та партнерів.</p>
-      <p>
-        <button type="button">Перейти у власний кабінет</button>
-        <button type="button">Зареєструватись</button>
-      </p>
+    <article class="account-section">
+      <div class="account-grid">
+        <div class="account-main">
+          <header>
+            <h2>Особистий кабінет та реєстрація</h2>
+          </header>
+          <p>
+            Для роботи з платформою передбачено особистий кабінет для клієнтів та партнерів.
+          </p>
+          <p class="account-actions">
+            <button type="button" class="primary-btn">
+              Перейти у власний кабінет
+            </button>
+            <button type="button" class="secondary-btn">
+              Зареєструватись
+            </button>
+          </p>
+        </div>
+
+        <aside class="account-sidebar">
+          <h2>Корисні посилання</h2>
+          <ul>
+            <li>
+              <a href="https://www.producthunt.com" target="_blank">
+                Product Hunt - платформа для стартапів
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com" target="_blank">
+                GitHub - хостинг для коду проєкту
+              </a>
+            </li>
+          </ul>
+
+          <h3>Контактна інформація</h3>
+          <p>Адреса: вул. Стартаперська, 15, м. Київ, 01001</p>
+          <p>Телефон: +38 (044) 123-45-67</p>
+          <p>E-mail: info@technova.io</p>
+        </aside>
+      </div>
     </article>
+
   </main>
 
-  <aside>
-    <h2>Корисні посилання</h2>
-    <ul>
-      <li>
-        <a href="https://www.producthunt.com" target="_blank">
-          Product Hunt - платформа для стартапів
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com" target="_blank">
-          GitHub - хостинг для коду проєкту
-        </a>
-      </li>
-    </ul>
 
-    <h3>Контактна інформація</h3>
-    <p>Адреса: вул. Стартаперська, 15, м. Київ, 01001</p>
-    <p>Телефон: +38 (044) 123-45-67</p>
-    <p>E-mail: info@technova.io</p>
-  </aside>
-
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2025 TechNova. Усі права захищено.</p>
   </footer>
 </body>

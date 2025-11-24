@@ -4,19 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechNova - Проєкти</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <div>
-      <img src="images/logo.png"
+<body class="projects-page">
+  <header class="site-header">
+    <div class="logo-block">
+      <img class="logo-img"
+           src="images/logo.png"
            alt="Логотип Tech start-up TechNova"
            width="80" height="80">
-      <h1>Tech start-up «TechNova»</h1>
-      <p>Наші ключові проєкти</p>
+      <div class="logo-text">
+        <h1>Tech start-up «TechNova»</h1>
+        <p>Наші ключові проєкти</p>
+      </div>
     </div>
   </header>
 
-  <nav>
+  <nav class="site-nav">
     <ul>
       <li><a href="index.html">Головна</a></li>
       <li><a href="projects.html">Проєкти</a></li>
@@ -24,14 +28,14 @@
     </ul>
   </nav>
 
-  <main>
+  <main class="projects-main">
     <article>
       <header>
         <h2>Портфоліо проєктів TechNova</h2>
       </header>
 
-      <section>
-        <article>
+      <section class="projects-grid">
+        <article class="project-card">
           <h3>Проєкт «NovaCRM»</h3>
           <img src="images/interface.jpg"
                alt="Інтерфейс CRM-системи NovaCRM"
@@ -46,7 +50,7 @@
           </ul>
         </article>
 
-        <article>
+        <article class="project-card">
           <h3>Проєкт «NovaAnalytics»</h3>
           <img src="images/dashboard.png"
                alt="Дашборд аналітики"
@@ -61,38 +65,30 @@
           </ul>
         </article>
 
-        <article>
+        <article class="project-card">
           <h3>Проєкт «NovaDesk»</h3>
           <img src="images/support.jpg"
-               alt="Інтерфейс служби підтримки"
-               width="260" height="160">
-          <p>Сервіс для організації служби підтримки клієнтів.</p>
+               alt="Інтерфейс системи підтримки NovaDesk"
+               width="316" height="175">
+          <p>Omni-channel сервіс-деск для підтримки клієнтів.</p>
           <ul>
-            <li>Єдина черга звернень користувачів</li>
-            <li>Пріоритезація задач</li>
-            <li>Шаблони відповідей</li>
-            <li>Історія взаємодій з клієнтом</li>
-            <li>Інтеграція з CRM та e-mail</li>
+            <li>Єдина стрічка звернень із e-mail, чатів та соцмереж</li>
+            <li>Розумний розподіл заявок за пріоритетами</li>
+            <li>База знань для самообслуговування клієнтів</li>
+            <li>Моніторинг SLA та продуктивності команди</li>
+            <li>Інтеграція з CRM та системою білінгу</li>
           </ul>
         </article>
       </section>
 
-      <form action="index.html" method="get">
-        <p>
-          <button type="submit">Повернутися на Головну сторінку</button>
-        </p>
-      </form>
+      <p class="back-home">
+        <a class="primary-link" href="index.html">Повернутися на головну сторінку</a>
+      </p>
     </article>
   </main>
 
-  <aside>
-    <h2>Контакти для співпраці</h2>
-    <p>E-mail: partners@technova.io</p>
-    <p>Телефон: +38 (044) 123-45-67</p>
-  </aside>
-
-  <footer>
-    <p>&copy; 2025 TechNova. Проєкти та рішення для бізнесу.</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 TechNova. Усі права захищено.</p>
   </footer>
 </body>
 </html>

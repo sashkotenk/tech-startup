@@ -4,19 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechNova - Зворотній зв’язок</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <div>
-      <img src="images/logo.png"
+<body class="feedback-page">
+  <header class="site-header">
+    <div class="logo-block">
+      <img class="logo-img"
+           src="images/logo.png"
            alt="Логотип Tech start-up TechNova"
            width="80" height="80">
-      <h1>Tech start-up «TechNova»</h1>
-      <p>Форма зворотного зв’язку для партнерів та клієнтів</p>
+      <div class="logo-text">
+        <h1>Tech start-up «TechNova»</h1>
+        <p>Форма зворотного зв’язку для партнерів та клієнтів</p>
+      </div>
     </div>
   </header>
 
-  <nav>
+  <nav class="site-nav">
     <ul>
       <li><a href="index.html">Головна</a></li>
       <li><a href="projects.html">Проєкти</a></li>
@@ -62,94 +66,86 @@
                    max="120"
                    required>
           </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Освіта та інтереси</legend>
 
           <p>
-            <label for="education">Освіта:</label><br>
+            <label for="education">Освіта (виберіть одну з переліку):</label><br>
             <select id="education" name="education" required>
               <option value="">Оберіть варіант</option>
-              <option value="full">повна</option>
-              <option value="incomplete">неповна</option>
+              <option value="secondary_full">повна</option>
+              <option value="secondary_incomplete">неповна</option>
               <option value="higher">вища</option>
               <option value="professional">професійна</option>
             </select>
           </p>
 
+          <p>Інтереси (можна обрати декілька):</p>
           <p>
-            <span>Інтереси (можна вибрати кілька):</span><br>
             <label>
-              <input type="checkbox" name="interests" value="scientist">
+              <input type="checkbox" name="interest_scientist" value="scientist">
               науковець
             </label><br>
             <label>
-              <input type="checkbox" name="interests" value="investor">
+              <input type="checkbox" name="interest_investor" value="investor">
               інвестор
             </label><br>
             <label>
-              <input type="checkbox" name="interests" value="promoter">
+              <input type="checkbox" name="interest_promoter" value="promoter">
               промоутер
             </label><br>
             <label>
-              <input type="checkbox" name="interests" value="official">
+              <input type="checkbox" name="interest_officer" value="officer">
               держслужбовець
             </label>
           </p>
         </fieldset>
 
-        <p>
-          <label for="purpose">Мета зворотнього зв’язку:</label><br>
-          <select id="purpose" name="purpose" required>
-            <option value="">Оберіть мету</option>
-            <option value="cooperation">співпраця</option>
-            <option value="rights-violation">скарга на порушення права власності</option>
-            <option value="suggestion">пропозиція</option>
-            <option value="error">наявність помилки</option>
-          </select>
-        </p>
+        <fieldset>
+          <legend>Мета зворотнього зв’язку</legend>
 
-        <p>
-          <label for="details">Детально:</label><br>
-          <textarea id="details"
-                    name="details"
-                    rows="5"
-                    cols="40"
-                    maxlength="1000"
-                    style="max-width: 100%; max-height: 200px;"
-                    placeholder="Опишіть суть звернення (до 1000 символів)"
-                    required></textarea>
-        </p>
+          <p>
+            <label for="goal">Оберіть мету:</label><br>
+            <select id="goal" name="goal" required>
+              <option value="">Оберіть варіант</option>
+              <option value="cooperation">співпраця</option>
+              <option value="rights_complaint">скарга на порушення права власності</option>
+              <option value="suggestion">пропозиція</option>
+              <option value="bug_report">наявність помилки</option>
+            </select>
+          </p>
+        </fieldset>
 
-        <p>
-          <input type="checkbox"
-                 id="consent"
-                 name="consent"
-                 required>
-          <label for="consent">
-            Я надаю згоду на обробку моїх персональних даних.
-          </label>
-        </p>
+        <fieldset>
+          <legend>Детально</legend>
+          <p>
+            <label for="details">Опишіть детально ваш запит:</label><br>
+            <textarea id="details"
+                      name="details"
+                      maxlength="1000"
+                      placeholder="Введіть текст (до 1000 символів)..."></textarea>
+          </p>
+        </fieldset>
 
-        <p>
+        <p class="buttons-row">
           <button type="submit">Надіслати</button>
           <button type="reset">Очистити форму</button>
         </p>
-      </form>
 
-      <form action="index.html" method="get">
-        <p>
-          <button type="submit">Повернутися на Головну сторінку</button>
+        <p class="consent-row">
+          <label>
+            <input type="checkbox" name="consent" required>
+            Я погоджуюсь на обробку наданої мною інформації згідно з політикою конфіденційності.
+          </label>
         </p>
       </form>
     </article>
   </main>
 
-  <aside>
-    <h2>Додаткова інформація</h2>
-    <p>Якщо форма тимчасово недоступна, ви можете звернутися напряму:</p>
-    <p><strong>support@technova.io</strong></p>
-  </aside>
-
-  <footer>
-    <p>&copy; 2025 TechNova. Контакт для підтримки: support@technova.io.</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 TechNova. Усі права захищено.</p>
   </footer>
 </body>
 </html>
